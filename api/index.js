@@ -3,7 +3,6 @@
 // Load the package
 const line = require('@line/bot-sdk');
 const express = require('express');
-const axios = require('axios');
 require('dotenv').config();
 
 // Load the module
@@ -32,7 +31,7 @@ app.get('/', (req, res) => {
 // API Routing
 app.post('/api/line/message', line.middleware(config), async (req, res) => {
   const event = req.body.events[0];
-  const eventType = req.body.events[0].message.type;
+  const eventType = event.message.type;
 
   if (eventType === 'text') {
     await ButtonOrErrorMessage.SendMessage(client, event);
