@@ -35,3 +35,9 @@ nodemon
 ・③ データの整形
 
 ・④ クライアントに送る
+
+## デプロイ
+
+[Glitch](https://glitch.com/)を使いました。
+
+https://line-weather-fashion.glitch.me/
