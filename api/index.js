@@ -25,8 +25,6 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.post('/api', (req, res) => {
-  res.send('hello world');
 });
 
 // Start the server (Production Environment)
