@@ -6,6 +6,10 @@ const express = require('express');
 const axios = require('axios');
 require('dotenv').config();
 
+// Load the module
+const ButtonOrErrorMessage = require('./Common/Send/ButtonOrErrorMessage');
+const FlexMessage = require('./Common/Send/FlexMessage');
+
 // Read the ports from the process.env file
 const PORT = process.env.PORT || 3000;
 
@@ -25,8 +29,18 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.post('/api', (req, res) => {
-  res.send('hello world');
+// API Routing
+app.post('/api/line/message', line.middleware(config), async (req, res) => {
+  const event = req.body.events[0];
+  const eventType = req.body.events[0].message.type;
+
+  if (eventType === 'text') {
+    await ButtonOrErrorMessage.SendMessage(client, event);
+  }
+
+  if (eventType === 'location') {
+    await FlexMessage.SendMessage(client, event);
+  }
 });
 
 // Start the server (Production Environment)
