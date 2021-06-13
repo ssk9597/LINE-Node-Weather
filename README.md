@@ -13,10 +13,15 @@
 ## 開発
 
 Node.js
+
 Express
+
 @line/bot-sdk
+
 axios
+
 dotenv
+
 nodemon
 
 ## アプリの流れ
@@ -24,6 +29,9 @@ nodemon
 アプリの流れは大まかに以下の 4 つのステップで成り立っています。
 
 ・① クライアントが現在地を送る
+
 ・②[OpenWeather](https://openweathermap.org/)から天気予報を取得
+
 ・③ データの整形
+
 ・④ クライアントに送る
