@@ -4,6 +4,7 @@
 const line = require('@line/bot-sdk');
 const express = require('express');
 const axios = require('axios');
+const ngrok = require('ngrok');
 require('dotenv').config();
 
 // Read the ports from the process.env file
@@ -25,7 +26,15 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log('http://localhost:3000');
+// Start the server (Production Environment)
+// app.listen(PORT, () => {
+//   console.log('http://localhost:3000');
+// });
+
+// Connect the server with Ngrok (Development Environment)
+ngrok.connect(PORT).then((url) => {
+  app.listen(PORT, () => {
+    console.log('http://localhost:3000');
+    console.log(url);
+  });
 });
