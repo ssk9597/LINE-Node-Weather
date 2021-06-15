@@ -8,7 +8,10 @@
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/838372/c9583e2c-1e6c-a662-e7cf-b9995ca8e3cb.png)
 
-こんな思いを 2 度としないために今回このアプリを作りました。
+こんな思いを 2度としないために今回このアプリを作りました。
+
+## アーキテクチャ
+![Architecture](https://user-images.githubusercontent.com/70458379/121995960-be10b100-cde2-11eb-979b-bbd5a8f0cd30.png)
 
 ## 開発
 
