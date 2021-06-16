@@ -11,7 +11,7 @@
 こんな思いを 2度としないために今回このアプリを作りました。
 
 ## アーキテクチャ
-![Architecture](https://user-images.githubusercontent.com/70458379/121995960-be10b100-cde2-11eb-979b-bbd5a8f0cd30.png)
+![Architecture.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/838372/479f319c-9032-4137-65d3-3aa6a37b9b5d.png)
 
 ## 開発
 
